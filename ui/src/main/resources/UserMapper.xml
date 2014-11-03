@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.gyyx.yys.logic.dao.UserMapper">
+  <select id="selectUser" parameterType="String" resultType="cn.gyyx.yys.logic.beans.User">
+    select * from us_user_tb where username=#{username}
+  </select>
+  <select id="selectCode" resultType="int">
+    select max(code) from us_user_tb
+  </select>
+  <insert id="insertUser" parameterType="cn.gyyx.yys.logic.beans.User">
+    insert into us_user_tb values(#{user_id},#{username},#{password});
+    insert into us_userinfo_tb values(#{user_id},#{hobby},#{city})
+  </insert>
+</mapper>   

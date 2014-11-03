@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Develop project manage </title>
+</head>
+<body>
+
+注册页面
+<form method="post" action="/login/register">
+ 用户名： <input type="text" name="username"><br>
+ 密码： <input type="password" name="password"><br>
+ 爱好：<input name="hobby" type="checkbox" value="篮球">篮球
+    <input name="hobby" type="checkbox" value="足球">足球
+    <input name="hobby" type="checkbox" value="游泳">游泳<br>
+ 城市：<select name="city">
+      <option value="北京">北京</option>
+      <option value="上海">上海</option>
+      <option value="广州">广州</option>
+      <option value="深圳">深圳</option>
+    </select><br>
+ <input type="submit" value="提交">
+</form>
+
+</body>
+</html>
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Develop project manage </title>
+</head>
+<body>
+
+登录页面<br>
+  <form action="login" method="post">
+    用户名：<input type="text" name="username"><br>
+	密码：<input type="password" name="password"><br>
+	<input type="submit" value="登录">
+  </form>
+		<a href="register">注册</a>
+	
+  
+
+
+</body>
+</html>
