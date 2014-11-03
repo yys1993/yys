@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Develop project manage </title>
+</head>
+<body>
+
+注册成功，欢迎您：${map.username}<br>
+爱好：${map.hobby}<br>
+城市：${map.city}<br>
+
+
+</body>
+</html>
