@@ -32,8 +32,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import cn.gyyx.yys.logic.beans.Log;
 import cn.gyyx.yys.logic.beans.User;
+
 import cn.gyyx.yys.logic.bll.LogBll;
 import cn.gyyx.yys.logic.bll.UserBll;
+
 import cn.gyyx.yys.logic.dao.LogDao;
 import cn.gyyx.yys.logic.dao.UserDao;
 
@@ -58,14 +60,14 @@ public class HomeController {
 				DateFormat.LONG, locale);
 
 		String formattedDate = dateFormat.format(date);
-
 		model.addAttribute("serverTime", formattedDate);
-
 		return "login";
 	}
 
+
 	@RequestMapping(value = "/register", method = RequestMethod.POST)
 	public String register(HttpServletRequest request, Model model) {
+
 		Map map = new HashMap();
 		/*
 		 * name用户名，password密码，hobby爱好，city城市
@@ -86,6 +88,7 @@ public class HomeController {
 		user.setPassword(password);
 		user.setHobby(hobby[0]);
 		user.setCity(city);
+
 		UserBll bll = new UserBll();
 		String path = bll.insertUser(user, username);
 		model.addAttribute("map", map);
@@ -112,8 +115,10 @@ public class HomeController {
 			return "denglu";
 		} else {
 			if (user == null) {
+
 				UserBll bll = new UserBll();
 				user = bll.selectUser(username);
+
 				client.set(username, 3600, user);
 				if (user == null) {
 					return path;

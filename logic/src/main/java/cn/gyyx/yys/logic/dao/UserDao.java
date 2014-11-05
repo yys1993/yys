@@ -1,6 +1,8 @@
 package cn.gyyx.yys.logic.dao;
 
+
 import java.io.IOException;
+
 import java.io.InputStream;
 
 import org.apache.ibatis.io.Resources;
@@ -12,6 +14,7 @@ import cn.gyyx.yys.logic.dao.UserMapper;
 import cn.gyyx.yys.logic.beans.User;
 
 public class UserDao {
+
 	static String resource = "mybatis-config.xml";
 	SqlSessionFactory factory = null;
 /*
@@ -31,6 +34,7 @@ public class UserDao {
 		User user = null;
 		SqlSession session = factory.openSession();
 		try {
+
 			UserMapper mapper = session.getMapper(UserMapper.class);
 			user = mapper.selectUser(username);
 		} catch (Exception e) {
@@ -44,8 +48,10 @@ public class UserDao {
 	
 	public int selectCode() {
 		int code = 0;
+
 		SqlSession session = factory.openSession();
 		try {
+
 			UserMapper mapper = session.getMapper(UserMapper.class);
 			code = mapper.selectCode();
 		} catch (Exception e) {
@@ -58,8 +64,10 @@ public class UserDao {
 	}
 
     public void insertUser(User user) {
+
     	SqlSession session = factory.openSession();
 		try {
+
 			UserMapper mapper = session.getMapper(UserMapper.class);
 			mapper.insertUser(user);
 			session.commit();

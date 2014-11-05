@@ -10,6 +10,7 @@
 <body>
 
 注册页面
+
 <form method="post" action="/login/register">
  用户名： <input type="text" name="username"><br>
  密码： <input type="password" name="password"><br>
